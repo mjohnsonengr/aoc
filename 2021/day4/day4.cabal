@@ -25,6 +25,7 @@ source-repository head
 library
   exposed-modules:
       Part1
+      Part2
   other-modules:
       Paths_day4
   hs-source-dirs:
