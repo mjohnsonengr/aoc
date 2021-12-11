@@ -9,7 +9,6 @@ copyright:           "{{copyright}}{{^copyright}}{{year}}{{^year}}2019{{/year}} 
 
 extra-source-files:
 - README.md
-- ChangeLog.md
 
 # Metadata used when publishing your package
 # synopsis:            Short description of your package
