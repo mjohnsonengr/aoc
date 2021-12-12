@@ -21,6 +21,8 @@ description:         Please see the README on GitHub at <https://github.com/{{gi
 
 dependencies:
 - base >= 4.7 && < 5
+- split
+- containers
 
 library:
   source-dirs: src
@@ -56,17 +58,19 @@ main :: IO ()
 main = putStrLn "Test suite not yet implemented"
 
 {-# START_FILE src/Part1.hs #-}
-module Part1
-    ( part1
-    ) where
+module Part1 where
+
+import Data.List
+import Data.List.Split
 
 part1 :: [String] -> Int
 part1 ls = 0 -- TODO
 
 {-# START_FILE src/Part2.hs #-}
-module Part2
-    ( part2
-    ) where
+module Part2 where
+
+import Data.List
+import Data.List.Split
 
 part2 :: [String] -> Int
 part2 ls = 0 -- TODO
