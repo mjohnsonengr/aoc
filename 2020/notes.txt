@@ -1,0 +1,4 @@
+Input processing: there are a few things necessary:
+ * being able to process a file full of lines in different ways
+ * being able to group lines broken up by double line break
+   * either all the grouped lines should act like a single line, or be an array processed together
