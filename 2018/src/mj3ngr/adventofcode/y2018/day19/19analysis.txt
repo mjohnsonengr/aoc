@@ -1,0 +1,67 @@
+#ip 4(e)
+
+# Human-readable opcodes and pseudocode intermediate translation
+ 0: e = e + 16  # goto L17
+ 1: d = 1       # L1: d = 1
+ 2: b = 1       # L2: b = 1
+ 3: c = d * b   # L3:
+ 4: c = c == f  # if (d*b == f) {
+ 5: e = c + e   #   goto L7
+ 6: e = e + 1   # } else goto L8
+ 7: a = d + a   # L7: a += d
+ 8: b = b + 1   # L8: b += 1
+ 9: c = b > f   # if (b > f) {
+10: e = e + c   #   goto L12
+11: e = 2       # } else goto L3
+12: d = d + 1   # L12: d += 1
+13: c = d > f   # if (d > f) {
+14: e = c + e   #   goto L16
+15: e = 1       # } else goto L2
+16: e = e * e   # end
+17: f = f + 2   # L17: f += 2
+18: f = f * f   # f *= f
+19: f = e * f   # f *= 19
+20: f = f * 11  # f *= 11
+21: c = c + 4   # c += 4
+22: c = c * e   # c *= 22
+23: c = c + 5   # c += 5
+24: f = f + c   # f += c
+25: e = e + a   # goto 26+a
+26: e = 0       # goto L1
+27: c = e       # c = 27
+28: c = c * e   # c *= 28
+29: c = e + c   # c += 29
+30: c = e * c   # c *= 30
+31: c = c * 14  # c *= 14
+32: c = c * e   # c *= 32
+33: f = f + c   # f += c
+34: a = 0       # a = 0
+35: e = 0       # goto L1
+
+
+// Manually decompiled/optimized Kotlin program:
+// L17: essentially chooses a value for f
+f = if (a == 0) 929 else 10551329
+
+// L1: nested for loops (increment/condition check at L8-11 and L12-15)
+for (d in 1..f) {
+    for (b in 1..f) {
+        if (d*b == f) {
+          a += d
+        }
+    }
+}
+return a;
+
+// Optimization 1: odd numbers only have odd factors
+// Optimization 2: inner loop only needs to go until d*b is larger than f
+for (d in 1..f step 2) {
+  for (b in 1..f step 2) {
+    if (d*b == f) {
+      a += d
+    }
+    if (d*b > f) {
+      break
+    }
+  }
+}

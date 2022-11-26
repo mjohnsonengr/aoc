@@ -1,0 +1,5 @@
+Add 2018 Day 19 code.
+
+This one was rather tricky.  Part 1 went just fine, I was able to re-use the machine from day 16, but then I realized part 2 was going to take forever to run.  Then life happened and it's been nearly a month since I've been able to work on this -- if I had just left my computer running the algorithm I'm sure if would have computed the correct answer in that amount of time :).
+
+What I ended up doing was writing some simple code to translate the assembler into something slightly readable with register names and immediate values differentiated from each other.  With that I was able to come up with a rough interpretation (the comments on the right side of the interpreted code in 19analysis.txt), from which simple looping constructs could be extracted.  Finally, a small amount of optimization and I had a Kotlin program that ran rather quickly.
