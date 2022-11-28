@@ -8,21 +8,21 @@
  */
 
 plugins {
-    // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
-    id("org.jetbrains.kotlin.jvm") version "1.7.10"
+  // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
+  id("org.jetbrains.kotlin.jvm") version "1.7.10"
 
-    // Apply the application plugin to add support for building a CLI application in Java.
-    application
+  // Apply the application plugin to add support for building a CLI application in Java.
+  application
 }
 
 repositories {
-    // Use Maven Central for resolving dependencies.
-    mavenCentral()
+  // Use Maven Central for resolving dependencies.
+  mavenCentral()
 }
 
 dependencies {
-    // Pre-picked dependencies that might be needed (uncomment if needed)
-    // implementation("com.google.guava:guava:31.1-jre")
+  // Pre-picked dependencies that might be needed (uncomment if needed)
+  // implementation("com.google.guava:guava:31.1-jre")
 }
 
 sourceSets {
@@ -31,26 +31,27 @@ sourceSets {
 }
 
 testing {
-    suites {
-        // Configure the built-in test suite
-        val test by getting(JvmTestSuite::class) {
-            // Use Kotlin Test framework
-            useKotlinTest()
+  suites {
+    // Configure the built-in test suite
+    val test by
+        getting(JvmTestSuite::class) {
+          // Use Kotlin Test framework
+          useKotlinTest()
         }
-    }
+  }
 }
 
 application {
-    // Define the main class for the application.
-    mainClass.set("Part1Kt")
+  // Define the main class for the application.
+  mainClass.set("Part1Kt")
 }
 
 task("run1", JavaExec::class) {
-    mainClass.set("Part1Kt")
-    classpath = sourceSets["main"].runtimeClasspath
+  mainClass.set("Part1Kt")
+  classpath = sourceSets["main"].runtimeClasspath
 }
 
 task("run2", JavaExec::class) {
-    mainClass.set("Part2Kt")
-    classpath = sourceSets["main"].runtimeClasspath
+  mainClass.set("Part2Kt")
+  classpath = sourceSets["main"].runtimeClasspath
 }

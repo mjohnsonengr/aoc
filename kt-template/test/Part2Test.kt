@@ -9,7 +9,8 @@ class Part2Test {
             Sample("""
                 first input
             """, 1),
-            Sample("""
+            Sample(
+                """
                 second input
                 has two lines
             """, 2))
