@@ -12,6 +12,7 @@ class Part2 {
         elf += it.toLong()
       }
     }
+    elves.add(elf)
     return elves.sortedDescending().take(3).sum().toInt()
   }
 }

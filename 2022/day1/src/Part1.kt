@@ -12,6 +12,7 @@ class Part1 {
         elf += it.toInt()
       }
     }
+    elves.add(elf)
     return elves.max()
   }
 }
