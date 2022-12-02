@@ -27,9 +27,6 @@ C Z
 
   @Test
   fun input() {
-    val path = System.getProperty("user.dir")
-
-    println("Working Directory = $path")
     assertEquals(13221, Part1().run(File("input.txt").readText().trimIndent()))
   }
 
