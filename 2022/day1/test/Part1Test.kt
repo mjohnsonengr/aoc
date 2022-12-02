@@ -21,6 +21,7 @@ class Part1Test {
               9000
 
               10000
+              
               """,
                 24000))
 
@@ -30,6 +31,6 @@ class Part1Test {
   }
 
   data class Sample(private val rawInput: String, val result: Int) {
-    val input = rawInput.trimIndent().lines()
+    val input = rawInput.trimIndent()
   }
 }

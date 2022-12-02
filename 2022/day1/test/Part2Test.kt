@@ -29,6 +29,6 @@ class Part2Test {
   }
 
   data class Sample(private val rawInput: String, val result: Int) {
-    val input = rawInput.trimIndent().lines()
+    val input = rawInput.trimIndent()
   }
 }
