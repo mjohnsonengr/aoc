@@ -5,8 +5,8 @@ class Part2 {
     val result = input.lines().map {
       val other = it[0].code - 'A'.code
       val state = it[2].code - 'X'.code - 1
-      val winPts = state + 1 * 3
-      val playPts = (other+state) % 3 + 1
+      val winPts = (state + 1) * 3
+      val playPts = Math.floorMod(other+state, 3) + 1
       winPts + playPts
     }
 

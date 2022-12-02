@@ -1,3 +1,4 @@
+import java.io.File
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -10,12 +11,26 @@ class Part1Test {
                 """
 A Y
 B X
-C Z              """,
+C Z
+              """,
                 15))
 
     for (sample in samples) {
       assertEquals(sample.result, Part1().run(sample.input))
     }
+  }
+
+  @Test
+  fun wrap() {
+    assertEquals(7, Part1().run("C X"))
+  }
+
+  @Test
+  fun input() {
+    val path = System.getProperty("user.dir")
+
+    println("Working Directory = $path")
+    assertEquals(13221, Part1().run(File("input.txt").readText().trimIndent()))
   }
 
   data class Sample(private val rawInput: String, val result: Int) {

@@ -7,9 +7,9 @@ class Part1 {
       val my = it[2].code - 'X'.code
       val winPts =
         if (my == other) 3
-        else if ((my - 1) % 3 == other) 6
+        else if (Math.floorMod(my - 1, 3) == other) 6
         else 0
-      val playPts = my % 3 + 1
+      val playPts = Math.floorMod(my, 3) + 1
       winPts + playPts
     }
     return result.sum()
