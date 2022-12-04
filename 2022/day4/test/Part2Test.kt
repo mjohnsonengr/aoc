@@ -22,7 +22,7 @@ class Part2Test {
 
   @Test
   fun input() {
-    println(Part2().run(File("input.txt").readText().trimIndent()))
+    assertEquals(843, Part2().run(File("input.txt").readText().trimIndent()))
   }
 
   data class Sample(private val rawInput: String, val result: Int) {
