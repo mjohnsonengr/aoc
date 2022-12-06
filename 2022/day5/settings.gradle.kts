@@ -8,4 +8,4 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
-rootProject.name = "aoc"
+rootProject.name = "2022day5"

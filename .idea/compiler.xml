@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="2015.day2.aoc" target="17" />
+      <module name="2015.day2.aoc.main" target="17" />
+      <module name="2015.day2.aoc.test" target="17" />
+      <module name="2015.day3.aoc" target="17" />
+      <module name="2015.day3.aoc.main" target="17" />
+      <module name="2015.day3.aoc.test" target="17" />
+      <module name="2022.day1.aoc" target="17" />
+      <module name="2022.day1.aoc.main" target="17" />
+      <module name="2022.day1.aoc.test" target="17" />
+      <module name="day1.aoc" target="17" />
+      <module name="day1.aoc.main" target="17" />
+      <module name="day1.aoc.test" target="17" />
+      <module name="day2.aoc" target="17" />
+      <module name="day2.aoc.main" target="17" />
+      <module name="day2.aoc.test" target="17" />
+      <module name="day3.aoc" target="17" />
+      <module name="day3.aoc.main" target="17" />
+      <module name="day3.aoc.test" target="17" />
+      <module name="day4.aoc" target="17" />
+      <module name="day4.aoc.main" target="17" />
+      <module name="day4.aoc.test" target="17" />
+      <module name="day5.aoc" target="17" />
+      <module name="day5.aoc.main" target="17" />
+      <module name="day5.aoc.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
