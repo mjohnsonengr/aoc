@@ -26,7 +26,7 @@ move 1 from 1 to 2""", "CMZ"))
 
   @Test
   fun input() {
-    println(Part1().run(File("input.txt").readText().trimIndent()))
+    assertEquals("WHTLRMZRC", Part1().run(File("input.txt").readText().trimIndent()))
   }
 
   data class Sample(private val rawInput: String, val result: String) {

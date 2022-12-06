@@ -7,9 +7,7 @@ class Part1 {
     val crateRows =
         cratesIn
             .lines()
-            .map { line ->
-              (1..33 step 4)
-                .map { if (it < line.length) line[it] else ' ' } }
+            .map { line -> (1..33 step 4).map { if (it < line.length) line[it] else ' ' } }
             .reversed()
             .drop(1)
 
