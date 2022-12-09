@@ -62,7 +62,7 @@ class Part1 {
     return canSee.size
   }
 
-  fun transpose(list: List<List<Int>>): List<List<Int>> {
+  private fun transpose(list: List<List<Int>>): List<List<Int>> {
     val cols = list[0].size
     val rows = list.size
     return Array(cols) { j -> Array(rows) { i -> list[i][j] } }

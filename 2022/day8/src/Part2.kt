@@ -8,8 +8,9 @@ class Part2 {
 
     val trees = lines.map { line -> line.map { it.digitToInt() } }
 
-    return trees.withIndex().map { (r, row) ->
-      row.withIndex().map { (c, tree) ->
+    // Outer edge will always be 0
+    return trees.withIndex().drop(1).dropLast(1).map { (r, row) ->
+      row.withIndex().drop(1).dropLast(1).map { (c, tree) ->
         val seeUp =
             (r - 1 downTo 0)
               .map { trees[it][c] }
@@ -37,14 +38,8 @@ class Part2 {
         seeUp * seeDown * seeLeft * seeRight
       }
     }
-      .flatMap { it }
+      .flatten()
       .max()
-  }
-
-  fun transpose(list: List<List<Int>>): List<List<Int>> {
-    val cols = list[0].size
-    val rows = list.size
-    return Array(cols) { j -> Array(rows) { i -> list[i][j] } }.map { it.toList() }
   }
 }
 
