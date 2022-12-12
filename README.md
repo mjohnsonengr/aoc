@@ -1,5 +1,5 @@
 # My Advent of Code Solutions
-![](https://img.shields.io/badge/day%20📅-11-blue) ![](https://img.shields.io/badge/stars%20⭐-22-yellow)![](https://img.shields.io/badge/days%20completed-11-red)
+![](https://img.shields.io/badge/day%20📅-12-blue) ![](https://img.shields.io/badge/stars%20⭐-24-yellow)![](https://img.shields.io/badge/days%20completed-12-red)
 
 Here are my Advent of Code solutions over the years.  Hopefully I can flesh this out with solutions to every day from every year soon.
 
