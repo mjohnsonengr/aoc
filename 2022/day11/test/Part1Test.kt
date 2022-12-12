@@ -44,7 +44,7 @@ Monkey 3:
 
   @Test
   fun input() {
-    println(Part1().run(File("input.txt").readText().trimIndent()))
+    assertEquals(90294, Part1().run(File("input.txt").readText().trimIndent()))
   }
 
   data class Sample(private val rawInput: String, val result: Int) {

@@ -36,7 +36,7 @@ Monkey 3:
   Test: divisible by 17
     If true: throw to monkey 0
     If false: throw to monkey 1
-            """, BigInteger("2713310158")))
+            """, 2713310158L))
     for (sample in samples) {
       assertEquals(sample.result, Part2().run(sample.input))
     }
@@ -44,10 +44,10 @@ Monkey 3:
 
   @Test
   fun input() {
-    println(Part2().run(File("input.txt").readText().trimIndent()))
+    assertEquals(18170818354L, Part2().run(File("input.txt").readText().trimIndent()))
   }
 
-  data class Sample(private val rawInput: String, val result: BigInteger) {
+  data class Sample(private val rawInput: String, val result: Long) {
     val input = rawInput.trimIndent()
   }
 }
