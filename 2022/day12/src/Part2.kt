@@ -15,7 +15,7 @@ class Part2 {
             }
             'E' -> {
               goal = Pos(r, c)
-              26
+              25
             }
             else -> {
               val h = it.code - 'a'.code
