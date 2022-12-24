@@ -62,7 +62,10 @@ class Part2 {
         elves.add(new)
       }
     }
-
+    val minX = elves.minOf { it.x }
+    val minY = elves.minOf { it.y }
+    val maxX = elves.maxOf { it.x }
+    val maxY = elves.maxOf { it.y }
     // answer:
     return turns
   }
